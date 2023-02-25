@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: first-app
+  name: first-app
+spec:
+  ports:
+    - name: 8080-8086
+      port: 8080
+      protocol: TCP
+      targetPort: 8086
+  selector:
+    app: first-app
+  type: ClusterIP
+status:
+  loadBalancer: {}
